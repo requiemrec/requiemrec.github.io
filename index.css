@@ -63,8 +63,8 @@ a{
 .Warning-text{
     color: white;
     position: fixed;
+    width: 760px;
     left: 9em;
-     width: 760px;
     top: 10em;
     font:italic bold 40px Gabriola,sans-serif;
     text-shadow: 10px 10px 10px red;
