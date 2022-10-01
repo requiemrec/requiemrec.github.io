@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("background.jpg") no-repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        a{
+            text-decoration: none;
+        }
+        #in_img{
+            display: block;
+            width: 10em;
+            height: 10em;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-    <div id="h/w">
 
+    <div>
+        <div><img id="in_img" src="index.jpg"></div>
     </div>
     <script>
         window.onload = function () {
             function bom_size() {
-                let w = window.outerWidth;
-                let h = window.outerHeight;
-                let h_w = document.getElementById('h/w');
-                h_w.innerText = 'W:' + w + 'H:' + h;
+                let w = document.documentElement.clientWidth;
+                let h = document.documentElement.clientHeight;
+                console.log('W:' + w + 'H:' + h)
             }
+
 
             //每当窗口发生变化就执行
             window.addEventListener("resize", bom_size);
