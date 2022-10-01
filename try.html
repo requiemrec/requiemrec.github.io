@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="h/w">
+
+    </div>
+    <script>
+        window.onload = function () {
+            function bom_size() {
+                let w = window.outerWidth;
+                let h = window.outerHeight;
+                let h_w = document.getElementById('h/w');
+                h_w.innerText = 'W:' + w + 'H:' + h;
+            }
+
+            //每当窗口发生变化就执行
+            window.addEventListener("resize", bom_size);
+            //网页打开执行一次函数
+            bom_size();
+        }
+    </script>
+</body>
+</html>
