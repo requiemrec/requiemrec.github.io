@@ -1,1 +1,57 @@
 
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("background.jpg") no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+.index_img{
+    display: block;
+    position: fixed;
+    width: 10em;
+    height: 10em;
+    top: 8em;
+    left: 10em;
+    border-radius: 50%;
+
+    animation-name: move_top;
+    animation-duration: 2s;
+}
+@keyframes move_top {
+    from {
+        top: 5em;
+    }
+    to{
+        top: 8em;
+    }
+}
+.text{
+    display: block;
+    position: fixed;
+    color: white;
+    top: 10em;
+    left: 5em;
+    font:italic bold 2em Gabriola,sans-serif;
+}
+.Warning-text{
+    color: white;
+    position: fixed;
+    top: 15em;
+    font:italic bold 1.5em Gabriola,sans-serif;
+}
+
+.run{
+    position: fixed;
+    display: block;
+    color: white;
+    padding: 1em 1em;
+    top: 25em;
+    left: 10em;
+    font: normal normal bold 100%/100% Serif;
+}
