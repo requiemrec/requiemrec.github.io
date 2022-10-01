@@ -4,12 +4,17 @@
 }
 body{
     background: url("background.jpg") no-repeat;
-    background-size: 100vw 100vh;
+    background-size: 1380px 800px;
 }
+a{
+    text-decoration: none;
+}
+/*中间图片*/
 .index_img{
+    display: block;
     position: fixed;
-    left: 45vw;
-    top: 20vh;
+    left: 38em;
+    top: 8em;
     width: 10em;
     height: 10em;
     border-radius: 50%;
@@ -36,22 +41,24 @@ body{
 }
 .index_imgt{
     position: fixed;
-    left: 45vw;
-    top: 20vh;
+    left: 38em;
+    top: 8em;
     width: 10em;
     height: 10em;
     border-radius: 50%;
     box-shadow: 0 0 5px 2px gray;
 
     animation-name: move_top;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
+/*文字*/
 .text{
     color: white;
     position: fixed;
     left: 15em;
     top: 8em;
     font:italic bold 40px Gabriola,sans-serif;
+    text-shadow: 10px 10px 10px red;
 }
 .Warning-text{
     color: white;
@@ -59,4 +66,22 @@ body{
     left: 9em;
     top: 10em;
     font:italic bold 40px Gabriola,sans-serif;
+    text-shadow: 10px 10px 10px red;
+
+}
+/*按钮*/
+.run{
+    position: fixed;
+    display: block;
+    color: white;
+    padding: 1em 1em;
+    top: 20em;
+    left: 25em;
+    font: normal normal bold 150%/100% Serif;
+}
+.run:hover{
+    color: white;
+    background: gray;
+    opacity: 0.5;
+    border-radius: 20px
 }
