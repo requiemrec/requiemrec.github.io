@@ -75,6 +75,7 @@ a{
     position: fixed;
     display: block;
     color: white;
+    width: 200px;
     padding: 1em 1em;
     top: 20em;
     left: 25em;
