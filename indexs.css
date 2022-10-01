@@ -41,6 +41,7 @@ a{
 }
 .Warning-text{
     color: white;
+    width: 500px;
     position: fixed;
     top: 15em;
     font:italic bold 1.5em Gabriola,sans-serif;
