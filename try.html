@@ -8,10 +8,15 @@
             margin: 0;
             padding: 0;
         }
-        body{
+        .PC{
             background: url("background.jpg") no-repeat;
             width: 100vw;
             height: 100vh;
+        }
+        .phone{
+            background: url("phone-bg.jpg") no-repeat;
+            width: 50vw;
+            height: 5vh;
         }
         a{
             text-decoration: none;
@@ -60,7 +65,7 @@
         }
     </style>
 </head>
-<body>
+<body class="PC">
 
     <div>
         <div><img id="in_img" src="index.jpg"></div>
@@ -72,9 +77,14 @@
             function bom_size() {
                 let w = document.documentElement.clientWidth;
                 let h = document.documentElement.clientHeight;
+                //获取body
+                let equipment = document.body;
+
                 console.log('W:' + w + 'H:' + h)
                 if ( w<600 ){
-                    console.log(w)
+                    equipment.className='phone';
+                }else{
+                    equipment.className='PC';
                 }
             }
             function Warning_text() {
@@ -84,7 +94,7 @@
                 timer = setInterval(function () {
                     Warning_text.innerText = str.substring(0, i);
                     i++
-                    if (Warning_text.innerHTML == str) {
+                    if (Warning_text.innerHTML === str) {
                         clearInterval(timer);
                     }
                 }, 60)
