@@ -4,36 +4,56 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        
         *{
             margin: 0;
             padding: 0;
         }
         body{
-            background: url("background.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            background: url("background.jpg") no-repeat;
+            width: 100vw;
             height: 100vh;
-            margin: 0px;
-            padding: 0px;
-
         }
         a{
             text-decoration: none;
         }
+        @keyframes move {
+            
+        }
         #in_img{
             display: block;
+            position: fixed;
+            top: 10em;
+            left: 40em;
             width: 10em;
             height: 10em;
             border-radius: 50%;
+        }
+        #text{
+            display: block;
+            position: fixed;
+            color: white;
+            font:italic bold 40px Gabriola,sans-serif;
+            width: 250px;
+            top: 8em;
+            left: 15em;
+        }
+        #Waring_text{
+            display: block;
+            position: fixed;
+            color: white;
+            font:italic bold 40px Gabriola,sans-serif;
+            width: 760px;
+            left: 9em;
+            top: 10em;
         }
     </style>
 </head>
 <body>
 
     <div>
-<!--         <div><img id="in_img" src="index.jpg"></div> -->
+        <div><img id="in_img" src="index.jpg"></div>
+        <div id="text">Welcome to my blog</div>
+        <div id="Waring_text"></div>
     </div>
     <script>
         window.onload = function () {
@@ -42,13 +62,24 @@
                 let h = document.documentElement.clientHeight;
                 console.log('W:' + w + 'H:' + h)
             }
-
-
+            function Warning_text() {
+                let str = 'I always thought that someone had to stand up and be a hero.';
+                let Warning_text = document.getElementById('Waring_text');
+                i = 0;
+                timer = setInterval(function () {
+                    Warning_text.innerText = str.substring(0, i);
+                    i++
+                    if (Warning_text.innerHTML == str) {
+                        clearInterval(timer);
+                    }
+                }, 60)
+            }
             //每当窗口发生变化就执行
             window.addEventListener("resize", bom_size);
             //网页打开执行一次函数
             bom_size();
+            Warning_text();
         }
     </script>
 </body>
-</html>
+</html
